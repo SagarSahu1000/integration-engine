@@ -9,6 +9,8 @@ public class FieldMapping {
     @Id
     private Long id;
 
+    private Long appId;
+
     private String sourcePath;
     private String targetField;
 
