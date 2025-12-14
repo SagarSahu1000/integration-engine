@@ -23,23 +23,23 @@ This project implements the OAuth2 Authorization Code flow for Calendly.
 
 - Step 1: Get Authorization Code
 
-User is redirected to Calendly for authorization:
+  User is redirected to Calendly for authorization:
 
-https://auth.calendly.com/oauth/authorize
-?response_type=code
-&client_id=YOUR_CLIENT_ID
-&redirect_uri=http://localhost:8080/oauth/callback
+  https://auth.calendly.com/oauth/authorize
+  ?response_type=code
+  &client_id=YOUR_CLIENT_ID
+  &redirect_uri=http://localhost:8080/oauth/callback
 
-After successful login and consent, Calendly redirects back with an authorization code.
+  After successful login and consent, Calendly redirects back with an authorization code.
 
 - Step 2: Exchange Code for Access Token
 
-The backend exchanges the authorization code for an access token by calling:
+  The backend exchanges the authorization code for an access token by calling:
 
-POST https://auth.calendly.com/oauth/token
+  POST https://auth.calendly.com/oauth/token
 
-The received access token is stored securely and used for API calls.
-In a production setup, tokens should be stored in a secure vault and refreshed automatically.
+  The received access token is stored securely and used for API calls.
+  In a production setup, tokens should be stored in a secure vault and refreshed automatically.
 
 ## API Usage
 Fetch Calendly Users
